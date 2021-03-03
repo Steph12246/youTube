@@ -1,0 +1,228 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+/* The slide out menu */
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  margin: 15px;
+}
+
+.hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  padding: 1rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.bg {
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  border-radius: 15%;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.bg:before,
+.bg:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -8px;
+  width: 100%;
+  height: 3px;
+  border-radius: 15%;
+  background: inherit;
+}
+
+.bg:after {
+  top: 8px;
+}
+
+.toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.toggler:checked ~ .menu > div {
+  transform: translateX(0);
+  transition-duration: 0.4s;
+}
+
+.toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  background-color: rgba(105, 105, 105, 0.3);
+}
+
+.border {
+  border-top: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
+  width: 100%;
+  color: black;
+}
+
+.border2 {
+  border-bottom: 2px solid lightgrey;
+  width: 100%;
+  color: black;
+}
+
+.div1 {
+  background: white;
+  width: 40vh;
+  height: 100vh;
+  display: block;
+  flex: none;
+  align-items: left;
+  justify-content: left;
+  transform: translateX(-40vh);
+  transition: all 0.4s ease;
+}
+
+.logo {
+  display: block;
+  height: 40px;
+  padding: 28px 0 20px 28px;
+  max-width: 40vh;
+  margin: auto;
+}
+
+.menuList {
+  margin: auto;
+  list-style: none;
+  color: black;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  grid-template-rows: 1fr;
+  text-align: left;
+  padding: 15px;
+}
+
+.menuLinks {
+  color: inherit;
+  font-size: 21px;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.uList {
+  padding: 15px 0;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+/* navigation */
+
+.nav {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  margin: auto;
+  grid-template-columns: 50px 190px 4fr 1fr 50px 50px 50px 50px 10px;
+  grid-template-rows: 50px;
+  grid-gap: 2%;
+  height: 85px;
+  background-color: white;
+  align-content: center;
+}
+
+.navList {
+  margin: auto;
+}
+.mic {
+  justify-content: left;
+}
+
+.mainLogo {
+  grid-column-start: 2;
+  height: 35px;
+  margin: auto;
+}
+
+.navIcon {
+  width: 55px;
+}
+
+.searchBar > input {
+  height: 45px;
+  width: 100%;
+  max-width: 100%;
+  font-size: 24px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+.searchButton {
+  background-color: #f2f2f2;
+  height: 47px;
+  width: 100px;
+  min-width: 55px;
+  margin: auto;
+  padding: 5px;
+  position: relative;
+  top: -48px;
+  left: calc(100% - 82px);
+  border: none;
+  border-left: 1px solid lightgrey;
+  border-radius: 0 5px 5px 0;
+
+}
+
+.searchButton > img {
+  height: 35px;
+  margin: auto;
+}
+
+.mainVideo {
+  background-color: grey;
+  margin: auto;
+  width: 1000px;
+  height: 800px;
+  max-height: 70vh;
+}
