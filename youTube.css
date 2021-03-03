@@ -3,7 +3,9 @@ body {
     margin: 0;
     background-color: #f2f2f2;
 }
-/* The slide out menu */
+
+/* The slide out burger menu */
+
 .menu-wrap {
   position: fixed;
   top: 0;
@@ -17,8 +19,8 @@ body {
   left: 0;
   z-index: 2;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   opacity: 0;
   margin: 15px;
 }
@@ -28,8 +30,8 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   padding: 1rem;
   background: white;
   display: flex;
@@ -109,22 +111,30 @@ body {
 
 .div1 {
   background: white;
-  width: 40vh;
+  width: 30vw;
+  min-width: 100px;
+  max-width: 300px;
   height: 100vh;
   display: block;
   flex: none;
-  align-items: left;
-  justify-content: left;
   transform: translateX(-40vh);
   transition: all 0.4s ease;
 }
 
-.logo {
+/* slide out menu content */
+
+ .logo {
   display: block;
-  height: 40px;
+  height: 30px;
   padding: 28px 0 20px 28px;
   max-width: 40vh;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.youTube {
+  border: none;
+  background-color: inherit;
 }
 
 .menuList {
@@ -155,12 +165,14 @@ body {
   height: 30px;
   margin: auto;
 }
+
 /* navigation */
 
 .nav {
+  position: fixed;
+  top: 0;
   width: 100%;
   padding: 0;
-  margin: 0;
   list-style: none;
   display: grid;
   margin: auto;
@@ -219,10 +231,190 @@ body {
   margin: auto;
 }
 
+.rickRolling {
+  border: none;
+  background-color: inherit;
+}
+/* main video */
+
+.mainVideo, .videoInfo {
+  width: 95vw;
+  max-width: 1060px;
+}
+
 .mainVideo {
   background-color: grey;
-  margin: auto;
-  width: 1000px;
-  height: 800px;
-  max-height: 70vh;
+  margin: 40px auto 20px auto;
+  height: 60vw;
+  max-height: 800px;
 }
+
+.videoInfo {
+  margin: auto;
+  padding: 10px 10px 25px 10px;
+  border-bottom: 1px solid lightgrey;
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr;
+  grid-template-rows: 22px 35px 34px;
+}
+
+.hashTags, .videoName{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding: 0;
+}
+
+.hashTags > p {
+  margin: 0;
+  color: blue;
+}
+
+.videoName {
+  margin: 0 auto auto 0;
+  font-size: 10px;
+
+}
+
+ h1 {
+  margin: auto;
+  font-size: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.videoEngagement > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: auto;
+  align-items: center;
+}
+
+.likes {
+  border-bottom: 1px solid grey;
+}
+
+.videoEngagement > ul > li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: auto;
+  font-size: 20px;
+  padding: 15px;
+}
+
+.like {
+  height: 30px;
+  width: auto;
+  padding-right: 10px;
+}
+
+.videoViews {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.EngagementList {
+  list-style: none;
+}
+
+/* Youtube profile details */
+
+.youTubeProfile {
+  border-bottom: 1px solid lightgrey;
+  padding: 0 15px 15px;
+}
+
+.youTubeProfile > a {
+  display: grid;
+  grid-template-columns: 100px 1fr 200px;
+  grid-template-rows: 1fr 1fr;
+  padding: 0 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sub {
+  height: 40px;
+  width: 130px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: 1px solid darkred;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin: auto;
+}
+
+.youTubeProfile > block {
+  margin-left: 115px;
+}
+
+.youTubeProfile > a > img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  width: 75px;
+}
+
+.profileName {
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.subscribers {
+  color: grey;
+}
+
+/* suggested videos*/
+
+.suggestedVideos {
+  height: 1000px;
+  width: 95%;
+  background-color: blue;
+  margin: 20px auto;
+
+}
+.suggested {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  grid-template-rows: 30px 30px 90px;
+  border: 1px solid black;
+  background: pink;
+}
+
+.suggested > a {
+  color: black;
+  text-decoration: none;
+}
+
+iframe {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  grid-column-start: 2;
+}
+
+h3 {
+  font-size: 14px;
+  text-align: left;
+  grid-column-start: 2;
+  margin: auto auto auto 0;
+}
+
+h4 {
+  font-size: 14px;
+  text-align: left;
+  grid-column-start: 2;
+  margin: 0 auto auto 0;
+}
+
+
+
+/* when done try add the subscribed button and drop down bell menu */
