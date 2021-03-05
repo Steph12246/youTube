@@ -329,15 +329,29 @@ body {
 .youTubeProfile {
   border-bottom: 1px solid lightgrey;
   padding: 0 15px 15px;
+  display: grid;
+  grid-template-columns: calc(100px + 1fr) 200px;
+  grid-template-rows: 2fr 1fr;
+  padding: 0 15px;
 }
 
 .youTubeProfile > a {
-  display: grid;
-  grid-template-columns: 100px 1fr 200px;
-  grid-template-rows: 1fr 1fr;
-  padding: 0 15px;
   text-decoration: none;
   color: inherit;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.subToggle {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin: auto;
+  width: 100%;
+  height: 60%;
+  position: relative;
+  border: 1px solid black;
 }
 
 .sub {
@@ -351,10 +365,23 @@ body {
   grid-row-start: 1;
   grid-row-end: 3;
   margin: auto;
+  position: absolute;
 }
 
+.subscribed {
+  height: 45px;
+  position: absolute;
+  margin: auto;
+  top: -2px;
+  left: -10px;
+  z-index: 1;
+  opacity: 1;
+}
+
+
 .youTubeProfile > block {
-  margin-left: 115px;
+  margin-left: 100px;
+  grid-row-start: 2;
 }
 
 .youTubeProfile > a > img {
@@ -365,12 +392,15 @@ body {
 
 .profileName {
   font-weight: bold;
-  margin-bottom: 0;
-  margin-top: auto;
+  margin-top: 0;
+  grid-row-start: 2;
 }
 
 .subscribers {
   color: grey;
+  grid-column-start: 2;
+  margin-bottom: 0;
+  margin-top: auto;
 }
 
 /* suggested videos*/
@@ -381,6 +411,7 @@ body {
   margin: 20px auto;
 
 }
+
 .suggested {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -388,12 +419,17 @@ body {
   padding: 5px;
 }
 
+/* remove this one*/
 .suggested > a {
   color: black;
   text-decoration: none;
 }
 
+.previewText {
+  text-decoration: none;
+}
 h2 {
+  color: black;
   font-weight: bold;
   font-size: 16px;
   text-align: left;
@@ -404,7 +440,7 @@ h3 {
   font-size: 14px;
   text-align: left;
   grid-column-start: 2;
-  margin: auto auto auto 0;
+  margin: auto auto 0 0;
   color: grey;
 }
 
@@ -414,6 +450,21 @@ h4 {
   grid-column-start: 2;
   margin: 0 auto auto 0;
   color: grey;
+}
+
+.filter {
+  margin-left: 3%;
+}
+
+.filter > button {
+  margin-top: 20px;
+  height: 30px;
+  border-radius: 50px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  font-size: 16px;
+  text-align: center;
+  background-color: lightgrey;
 }
 
 /* Embedded videos */
@@ -436,10 +487,6 @@ h4 {
  left: 0;
 }
 
-.moving:hover, .moving:active, .moving:focus {
-  opacity: 100;
-}
-
 .moving {
  height: 100%;
  opacity: 0;
@@ -449,9 +496,119 @@ h4 {
  left: 0;
 }
 
+/* hover styles */
+
+.overlay {
+  background-color: grey;
+  opacity: 0.9;
+  padding: 5px 0;
+  position: relative;
+  top: 0;
+  left: -30%;
+  width: 160px;
+  margin: auto;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 14px;
+  visibility: hidden;
+}
+
+.container {
+  align-items: center;
+  margin: auto;
+}
+
+.container:hover .overlay {
+    visibility: visible;
+    transition-delay: 0.4s;
+}
+
+#search {
+  position: relative;
+  top: -40px;
+  left: 45%;
+}
+
+.filter > button:hover {
+  background-color: grey;
+}
+
+/* hover & overlay on suggested videos */
+.timing, .watch, .queue {
+  background-color: black;
+  opacity: 0.8;
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 3px;
+}
+
+.timing {
+  margin: auto 20px 5px auto;
+  width: 60px;
+  grid-row-start: 3;
+  grid-column-start: 1;
+  z-index: 2;
+}
+
+.short {
+  width: 40px;
+}
+
+.watchAndQueue {
+  position: absolute;
+  width: 95%;
+  height: 150px;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  z-index: 4;
+  opacity: 0;
+}
+
+.watchAndQueue:hover{
+  opacity: 1;
+}
+
+.watchAndQueue:hover + .images .moving {
+  opacity: 1;
+  transition: all 0.4s ease;
+  transition-delay: 0.4s;
+  z-index: 3;
+}
+
+.images:hover .moving , .images:hover .watchAndQueue{
+  opacity: 1;
+}
+
+.watch, .queue , .videoOptions {
+  border: none;
+  opacity: 1;
+}
+
+.watch, .queue {
+  display: block;
+  margin: 2px auto auto 240px;
+}
+
+.small {
+  width: 15px;
+}
+
+.previewText {
+  display: block;
+}
+
+.videoOptions {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+}
 /* when done try add the subscribed button and drop down bell menu */
 
-@media (min-width: 600px) {
+@media (min-width: 1015px) {
   h4 {
     color: lightblue;
   }

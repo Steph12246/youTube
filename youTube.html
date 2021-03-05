@@ -50,12 +50,17 @@
       </li>
         <li class="navList"><a href = "https://youtube.com">
           <img class= "mainLogo" src= "logo.png"/></a></li>
-          <li class="searchBar"><input type="text" placeholder="Search"/>
-          <button class="searchButton"><img src="search.png"/></button></li>
-            <li class="mic"><img class= "navIcon" src= "mic.jpg"/></li>
-              <li class="navList"><img class= "navIcon" src= "camera.jpg"/></li>
-                <li class="navList"><img class= "navIcon" src= "nine-dots.jpg"/></li>
-                  <li class="navList"><img class= "navIcon" src= "bell.jpg"/></li>
+          <li class="searchBar"><input type="text" placeholder="Search"/><div class="container">
+          <button class="searchButton"><img src="search.png"/></button>
+          <div class="overlay" id="search" style="width: 80px;">Search</div></div></li>
+            <li class="mic"><div class="container"><img class= "navIcon" src= "mic.jpg"/>
+              <div class="overlay">Search with your voice</div></div></li>
+              <li class="navList"><div class="container"><img class= "navIcon" src= "camera.jpg"/>
+              <div class="overlay" style="width: 70px;">Create</div></div></li>
+                <li class="navList"><div class="container"><img class= "navIcon" src= "nine-dots.jpg"/>
+                <div class="overlay" style="width: 100px;">youTube apps</div></div></li>
+                  <li class="navList"><div class="container"><img class= "navIcon" src= "bell.jpg"/>
+                  <div class="overlay" style="width: 90px;">Notifications</div></div></li>
                     <li class="navList"><button class="rickRolling"><a target= "_blank"
                       href = "https://youtu.be/dQw4w9WgXcQ">
                       <img class= "navIcon" src= "avatar.jpg"/></a>
@@ -91,88 +96,140 @@
         <div class="youTubeProfile"><a href="https://www.youtube.com/channel/UCyZx6T_N-JyFqLsSw-fBcIQ">
             <img class= "navIcon" src= "avatar.jpg"/>
             <div class="profileName">Daniel Spicer</div>
-            <button class= "sub">SUBSCRIBE</button>
             <div class="subscribers">11.8K subscribers </div> </a>
+            <div class="subToggle">
+              <button class= "sub">SUBSCRIBE</button>
+              <img class="subscribed" src="subscribed.png">
+            </div>
             <block> Have you found your berries? </block>
         </div>
+        <span class="filter">
+          <button style="background-color: grey; color: white;">All</button>
+          <button>Related</button>
+          <button>Watched</button>
+          <button>Recently uploaded</button>
+          <button>From Daniel Spicer</button>
+        </span>
           <div class="suggestedVideos">
-            <div class="suggested">
+            <a class="previewText" href="https://www.youtube.com/watch?v=BjhW3vBA1QU&ab_channel=jbalvinVEVO">
+             <div class="suggested">
+              <p class="timing short">4:09</p>
+              <div class="watchAndQueue">
+                <button class="watch"><img class="small" src="clock.svg"/></button>
+                <button class="queue"><img class="small" src="playlist-play.svg"/></button>
+                <button class="videoOptions"><img class="small" src="dots_vertical-512.webp"/></button>
+              </div>
               <div class="images">
-              <img class="thumb" src="unDiaThumb.png"/>
-              <img class="moving" src="jBalvin.webp"/>
+                <img class="thumb" src="unDiaThumb.png"/>
+                <img class="moving" src="jBalvin.webp"/>
             </div>
-              <a href="https://www.youtube.com/watch?v=BjhW3vBA1QU&ab_channel=jbalvinVEVO">
               <h2>J.Balvin, Dua Lia, Bad Bunny, Tainy - UN DIA (ONE DAY)</h2>
                 <h3>J Balvin</h3>
                   <h4>190M views • 7 months ago</h4>
-              </a>
             </div>
+          </a>
+          <a class="previewText"href="https://www.youtube.com/watch?v=vcsSc2iksC0&t=2838s&ab_channel=LifeinaDay">
             <div class="suggested">
-              <div class="images">
-              <img class="thumb" src="lifeInADayThumb.png"/>
-              <img class="moving" src="lifeInADay.webp"/>
+              <p class="timing">1:25:54</p>
+              <div class="watchAndQueue">
+                <button class="watch"><img class="small" src="clock.svg"/></button>
+                <button class="queue"><img class="small" src="playlist-play.svg"/></button>
+                <button class="videoOptions"><img class="small" src="dots_vertical-512.webp"/></button>
             </div>
-              <a href="https://www.youtube.com/watch?v=vcsSc2iksC0&t=2838s&ab_channel=LifeinaDay">
+              <div class="images">
+                <img class="thumb" src="lifeInADayThumb.png"/>
+                <img class="moving" src="lifeInADay.webp"/>
+              </div>
               <h2>Life in a Day 2020 | Official Documentary</h2>
                 <h3>Life in a Day</h3>
                   <h4>12M views • 3 weeks ago</h4>
-              </a>
             </div>
+            </a>
+            <a class="previewText" href="https://www.youtube.com/watch?v=572vvlOUw1U&ab_channel=SorelleAmore">
             <div class="suggested">
+              <p class="timing short">7:33</p>
+              <div class="watchAndQueue">
+                <button class="watch"><img class="small" src="clock.svg"/></button>
+                <button class="queue"><img class="small" src="playlist-play.svg"/></button>
+                <button class="videoOptions"><img class="small" src="dots_vertical-512.webp"/></button>
+            </div>
               <div class="images">
-              <img class="thumb" src="icelandThumb.png"/>
-              <img class="moving" src="iceland.webp"/>
+                <img class="thumb" src="icelandThumb.png"/>
+                <img class="moving" src="iceland.webp"/>
               </div>
-              <a href="https://www.youtube.com/watch?v=572vvlOUw1U&ab_channel=SorelleAmore">
               <h2>WHY I moved to Iceland 5 YEARS AGO from Australia</h2>
                 <h3>Sorelle Amore</h3>
                   <h4>32K views • 5 days ago</h4>
-              </a>
             </div>
+            </a>
+              <a class="previewText" href="https://www.youtube.com/watch?v=CeCzxzgkW2k&ab_channel=KaraandNate">
             <div class="suggested">
+              <p class="timing">1:17:41</p>
+              <div class="watchAndQueue">
+                <button class="watch"><img class="small" src="clock.svg"/></button>
+                <button class="queue"><img class="small" src="playlist-play.svg"/></button>
+                <button class="videoOptions"><img class="small" src="dots_vertical-512.webp"/></button>
+            </div>
               <div class="images">
-              <img class="thumb" src="100Countries.png"/>
-              <img class="moving" src="bloops.webp"/>
+                <img class="thumb" src="100Countries.png"/>
+                <img class="moving" src="bloops.webp"/>
               </div>
-              <a href="https://www.youtube.com/watch?v=CeCzxzgkW2k&ab_channel=KaraandNate">
               <h2>BLOOPS from 100 countries!</h2>
                 <h3>Kara and Nate</h3>
                   <h4>835K views • 1 year ago</h4>
-                </a>
             </div>
+            </a>
+            <a class="previewText" href="https://www.youtube.com/watch?v=ztuJHnsEvJw&ab_channel=BackpackingBananas">
             <div class="suggested">
+              <p class="timing short">6:21</p>
+              <div class="watchAndQueue">
+                <button class="watch"><img class="small" src="clock.svg"/></button>
+                <button class="queue"><img class="small" src="playlist-play.svg"/></button>
+                <button class="videoOptions"><img class="small" src="dots_vertical-512.webp"/></button>
+            </div>
               <div class="images">
-              <img class="thumb" src="50hour.png"/>
-              <img class="moving" src="50Hour.webp"/>
+                <img class="thumb" src="50hour.png"/>
+                <img class="moving" src="50Hour.webp"/>
               </div>
-              <a href="https://www.youtube.com/watch?v=ztuJHnsEvJw&ab_channel=BackpackingBananas">
               <h2>the 50 hour flight</h2>
                 <h3>Backpacking Bananas</h3>
                   <h4>100k views • 3 years ago</h4>
-              </a>
             </div>
+            </a>
+            <a class="previewText" href="https://www.youtube.com/watch?v=mQ055hHdxbE&ab_channel=JohnMayer">
             <div class="suggested">
+              <p class="timing short">3:48</p>
+              <div class="watchAndQueue">
+                <button class="watch"><img class="small" src="clock.svg"/></button>
+                <button class="queue"><img class="small" src="playlist-play.svg"/></button>
+                <button class="videoOptions"><img class="small" src="dots_vertical-512.webp"/></button>
+            </div>
               <div class="images">
-              <img class="thumb" src="newLight.png"/>
-              <img class="moving" src="johnM.webp"/>
+                <img class="thumb" src="newLight.png"/>
+                <img class="moving" src="johnM.webp"/>
               </div>
-              <a href="https://www.youtube.com/watch?v=mQ055hHdxbE&ab_channel=JohnMayer">
               <h2>John Mayer - New Light (Premiun Content!)</h2>
                 <h3>John Mayer</h3>
                   <h4>76M views • 2 years ago</h4>
-              </a>
             </div>
+            </a>
+            <a class="previewText" href="https://www.youtube.com/watch?v=9tkEDSQBhRo&ab_channel=SpinFXLEDEntertainment">
             <div class="suggested">
+              <p class="timing short">3:20</p>
+              <div class="watchAndQueue">
+                <button class="watch"><img class="small" src="clock.svg"/></button>
+                <button class="queue"><img class="small" src="playlist-play.svg"/></button>
+                <button class="videoOptions"><img class="small" src="dots_vertical-512.webp"/></button>
+            </div>
               <div class="images">
-              <img class="thumb" src="spinFX.png"/>
-              <img class="moving" src="spinFX.webp"/>
+                <img class="thumb" src="spinFX.png"/>
+                <img class="moving" src="spinFX.webp"/>
               </div>
-              <a href="https://www.youtube.com/watch?v=MZQmJZ_31O0&ab_channel=LisaLottie">
               <h2>Official SpinFX Phoenix Hoop</h2>
                 <h3>SpinFX LED Entertainment</h3>
                   <h4>11k views • 7 years ago</h4>
-                </a>
             </div>
+            </a>
           </div>
             <div class="comments">
             </div>
