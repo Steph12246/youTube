@@ -1,11 +1,5 @@
 Thing to do to the youTube:
-1) pop up boxes when you hover
-4) fix the search bar monstrosity
-5) hover on the round buttons
-5) media query on small size
-6) clicking the subscribe button-add toggle and centre buttons
-7) shrink images on smaller size so the date stays on one line
-8) title image (tab bit)
-9) comment section
-10) underline is own separate div which if you hover over
+1) media query on small size - icons, text, search bar and burger menu
+2) shrink images on smaller size so the date stays on one line
+3) underline is own separate div which if you hover over
   gives you the like dislike ratio
